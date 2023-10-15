@@ -1,0 +1,158 @@
+@import url('https://fonts.googleapis.com/css2?family=Sora:wght@100;200;400;700;800&display=swap');
+
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit;
+}
+
+html {
+  font-size: 62.5%; // 10px
+}
+
+body {
+  box-sizing: border-box;
+  font-family: 'Sora', sans-serif;
+  padding: 6rem 2rem;
+  font-weight: 400;
+  background-color: $color-white-secondary;
+  max-width: 700px;
+  margin: 0 auto;
+
+  @media (min-width: 900px) {
+    max-width: 1100px;
+    height: 100vh;
+  }
+}
+
+.main {
+  @media (min-width: 900px) {
+    display: flex;
+    align-items: center;
+    gap: 8rem;
+    height: 100vh;
+  }
+
+  .section-reviews {
+    margin-bottom: 4rem;
+    .text-box {
+      margin-bottom: 2rem;
+      .star-filled {
+        width: 35px;
+        height: 35px;
+        display: inline-block;
+        background-color: $color-gold;
+        border-radius: 50%;
+        padding: 5px;
+        margin-bottom: 1rem;
+      }
+
+      .heading-secondary {
+        font-size: 3rem;
+        font-weight: 600;
+        margin-bottom: 1rem;
+      }
+
+      p {
+        font-size: 1.6rem;
+        color: $color-grey-dark;
+      }
+    }
+
+    .checklist {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      margin-bottom: 1rem;
+
+      p {
+        font-size: 1.1rem;
+      }
+    }
+
+    @media (min-width: 900px) {
+      width: 50%;
+    }
+  }
+
+  .section-cards {
+    .cards-container {
+      position: relative;
+      .card {
+        position: absolute;
+        top: 0;
+        padding: 2rem 2.5rem;
+        background-color: $color-white;
+        width: 65%;
+        margin-bottom: 2rem;
+        &__heading {
+          display: flex;
+          align-items: center;
+          justify-content: space-between;
+          margin-bottom: 1rem;
+          max-width: 35rem;
+          img {
+            width: 30%;
+          }
+          .stars {
+            svg {
+              fill: $color-grey-light;
+              &:not(:last-child) {
+                fill: $color-gold;
+              }
+            }
+          }
+        }
+
+        &__text {
+          h3 {
+            margin-bottom: 1rem;
+          }
+        }
+
+        &-1 {
+          right: 0;
+
+          .card__heading {
+            .stars {
+              svg {
+                &:last-child {
+                  fill: $color-gold;
+                }
+              }
+            }
+          }
+          @media (min-width: 900px) {
+            float: right;
+          }
+        }
+
+        &-2 {
+          top: 16rem;
+          left: 0;
+
+          @media (min-width: 900px) {
+            float: left;
+          }
+        }
+
+        @media (max-width: 430px) {
+          position: static;
+          width: 100%;
+        }
+
+        @media (min-width: 900px) {
+          position: static;
+
+          width: 65%;
+        }
+      }
+    }
+
+    @media (min-width: 900px) {
+      width: 50%;
+    }
+  }
+}
