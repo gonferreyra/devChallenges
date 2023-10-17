@@ -1,0 +1,241 @@
+@import url('https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@100;200;400;500;600;700&display=swap');
+
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit;
+}
+
+html {
+  font-size: 62.5%; // 10px = 1rem
+}
+
+body {
+  box-sizing: border-box;
+  font-family: 'Be Vietnam Pro', sans-serif;
+  background-image: url(../img/bg-image.svg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  min-height: 100vh;
+  padding: 2rem;
+}
+
+.header {
+  margin-bottom: 2rem;
+
+  i {
+    height: 25px;
+    display: block;
+
+    svg {
+      height: 100%;
+    }
+  }
+
+  @media (min-width: 1200px) {
+    padding: 0 2.5rem;
+  }
+}
+
+.text {
+  text-align: center;
+  max-width: 90%;
+  margin: 0 auto 4rem;
+  color: $color-white;
+  h1 {
+    font-size: 3.2rem;
+
+    @media (min-width: 900px) {
+      font-size: 4rem;
+    }
+
+    @media (min-width: 1200px) {
+      font-size: 6.3rem;
+      margin-bottom: 1.5rem;
+    }
+  }
+
+  p {
+    font-size: 1.2rem;
+    font-weight: 500;
+
+    @media (min-width: 900px) {
+      font-size: 1.4rem;
+    }
+
+    @media (min-width: 1200px) {
+      font-size: 3.2rem;
+    }
+  }
+
+  @media (min-width: 600px) {
+    max-width: 283px;
+  }
+
+  @media (min-width: 900px) {
+    max-width: 360px;
+  }
+
+  @media (min-width: 1200px) {
+    max-width: 640px;
+    margin-bottom: 6rem;
+  }
+}
+
+.form {
+  background-color: rgba($color-grey-light, 0.35);
+  padding: 2rem;
+  border-radius: 20px;
+  font-size: 1rem;
+
+  label {
+    color: $color-white;
+    @media (min-width: 900px) {
+      font-size: 1.1rem;
+    }
+
+    @media (min-width: 1200px) {
+      font-size: 1.4rem;
+    }
+  }
+
+  .form__row {
+    .form__row-box {
+      display: flex;
+      flex-direction: column;
+      gap: 0.5rem;
+      input {
+        width: 100%;
+        padding: 1rem 1.5rem;
+        border-radius: 10px;
+        border: none;
+        margin-bottom: 1rem;
+        font-weight: 600;
+
+        &::placeholder {
+          color: $color-grey-light;
+          font-size: 1rem;
+
+          @media (min-width: 900px) {
+            font-size: 1.5rem;
+          }
+
+          @media (min-width: 1200px) {
+            font-size: 1.6rem;
+          }
+        }
+
+        @media (min-width: 900px) {
+          padding: 2rem 1.5rem;
+          font-size: 1.5rem;
+        }
+
+        @media (min-width: 1200px) {
+          font-size: 1.6rem;
+        }
+      }
+
+      select {
+        margin-bottom: 1rem;
+        padding: 1.3rem 1.5rem;
+        -webkit-appearance: none !important;
+        -moz-appearance: none !important;
+        appearance: none !important;
+        background-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAB4AAAAUCAMAAACtdX32AAAAdVBMVEUAAAD///8AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAhMdQaAAAAJ3RSTlMAAAECAwQGBwsOFBwkJTg5RUZ4eYCHkJefpaytrsXGy8zW3+Do8vNn0bsyAAAAYElEQVR42tXROwJDQAAA0Ymw1p9kiT+L5P5HVEi3qJn2lcPjtIuzUIJ/rhIGy762N3XaThqMN1ZPALsZPEzG1x8LrFL77DHBnEMxBewz0fJ6LyFHTPL7xhwzWYrJ9z22AqmQBV757MHfAAAAAElFTkSuQmCC);
+        background-position: 100%;
+        background-repeat: no-repeat;
+        border-radius: 10px;
+        border: none;
+        font-family: inherit;
+        font-size: 1rem;
+        font-weight: 600;
+
+        @media (min-width: 900px) {
+          padding: 2rem 1.5rem;
+          font-size: 1.4rem;
+        }
+
+        @media (min-width: 1200px) {
+          font-size: 1.6rem;
+        }
+      }
+      @media (min-width: 600px) {
+        width: 100%;
+      }
+    }
+    @media (min-width: 600px) {
+      display: flex;
+      flex-direction: row;
+      gap: 1rem;
+      width: 100%;
+    }
+    @media (min-width: 1200px) {
+      margin-bottom: 1rem;
+    }
+  }
+
+  .form__select-box {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+
+    textarea {
+      width: 100%;
+      padding: 1rem 1.5rem;
+      border-radius: 10px;
+      border: none;
+      margin-bottom: 1rem;
+      font-family: inherit;
+      font-size: 1rem;
+      font-weight: 600;
+
+      &::placeholder {
+        color: $color-grey-dark;
+        font-size: 1rem;
+        @media (min-width: 900px) {
+          font-size: 1.4rem;
+        }
+
+        @media (min-width: 1200px) {
+          font-size: 1.6rem;
+        }
+      }
+
+      @media (min-width: 900px) {
+        padding: 2rem 1.5rem;
+        font-size: 1.4rem;
+      }
+    }
+
+    @media (min-width: 1200px) {
+      margin-bottom: 1rem;
+    }
+  }
+
+  button {
+    width: 100%;
+    padding: 1.2rem;
+    border-radius: 10px;
+    border: none;
+    margin-bottom: 2rem;
+    color: $color-purple;
+    font-weight: 600;
+    margin: 0;
+
+    @media (min-width: 900px) {
+      padding: 2rem 1.5rem;
+      font-size: 1.8rem;
+    }
+  }
+
+  @media (min-width: 900px) {
+    padding: 3rem;
+  }
+
+  @media (min-width: 1200px) {
+    max-width: 750px;
+    margin: 1rem auto;
+  }
+}
